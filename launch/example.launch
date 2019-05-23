@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find swarmie_simulator)/worlds/simple.world"/>
+  </include>
+
+  <group ns="dwight">
+    <include file="$(find swarmie_description)/launch/load_swarmie.launch" >
+      <arg name="name" value="dwight" />
+      <arg name="position" value="-x 0 -y 0 -z 0.1" />
+    </include>
+  </group>
+
+  <group ns="bob">
+    <include file="$(find swarmie_description)/launch/load_swarmie.launch" >
+      <arg name="name" value="bob" />
+      <arg name="position" value="-x 1.0 -y 1.0 -z 0.1" />
+    </include>
+  </group>
+
+  <group ns="alice">
+    <include file="$(find swarmie_description)/launch/load_swarmie.launch" >
+      <arg name="name" value="alice" />
+      <arg name="position" value="-x -1.0 -y 1.0 -z 0.1" />
+    </include>
+  </group>
+
+  <group ns="gomez">
+    <include file="$(find swarmie_description)/launch/load_swarmie.launch" >
+      <arg name="name" value="gomez" />
+      <arg name="position" value="-x -2.0 -y 2.0 -z 0.1" />
+    </include>
+  </group>
+
+  <group ns="joe">
+    <include file="$(find swarmie_description)/launch/load_swarmie.launch" >
+      <arg name="name" value="joe" />
+      <arg name="position" value="-x 2.0 -y 2.0 -z 0.1" />
+    </include>
+  </group>
+
+</launch>

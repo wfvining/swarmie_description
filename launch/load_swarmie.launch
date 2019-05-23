@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="name" default="swarmie" />
+  <arg name="position" />
+
+  <node name="spawn_swarmie" pkg="gazebo_ros" type="spawn_model" args="-file $(find swarmie_description)/models/swarmie.sdf $(arg position) -model $(arg name) -sdf" />
+</launch>
